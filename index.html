@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Screen Animation</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+
+        .loading-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            animation: fadeIn 2s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #61dafb;
+            color: #282c34;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #1990d4;
+        }
+    </style>
+</head>
+<body>
+
+<video autoplay loop muted>
+    <source src="path_to_your_heart_animation.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<div class="loading-container">
+    <h1>Welcome xxxsexy</h1>
+    <p>Do you want the link? Of course! Will soon...</p>
+    <button class="button" onclick="handleClick()">Click Me</button>
+</div>
+
+<script>
+    function handleClick() {
+        alert("Loading your content...");
+        // Here you can add the code to redirect or load new content.
+        // For example: window.location.href = 'your-link.html';
+    }
+</script>
+
+</body>
+</html>
